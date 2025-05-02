@@ -1,4 +1,5 @@
 <div align="center">
+<img width="30%" src="static/images/DevBuddy Logo.png">
 
 # StudyBuddy
 </div>
