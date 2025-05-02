@@ -5,17 +5,17 @@
 
 ### Cloning the Repository
 
---> 1. Clone the repository using the command below:
+--> Clone the repository using the command below:
 ```bash
 git clone https://github.com/bharat-dir96/DevBuddy-Django-Chat-Web-APP.git
 ```
 
---> 2. Move into the directory where we have the project files:
+--> Move into the directory where we have the project files:
 ```bash
 cd DevBuddy-Django-Chat-Web-APP
 ```
 
---> 3. Create a virtual environment:
+--> Create a virtual environment:
 ```bash
 # Let's install virtualenv first
 pip install virtualenv
@@ -24,12 +24,12 @@ pip install virtualenv
 virtualenv envname
 ```
 
---> 4. Activate the virtual environemnt:
+--> Activate the virtual environemnt:
 ```bash
-envname\Scripts\activate
+envname\scripts\activate
 ```
 
---> 5. Install the requirements:
+--> Install the requirements:
 ```bash
 pip install -r requirements.txt
 ```
@@ -52,7 +52,7 @@ python manage.py runserver
     <td width=50%>
       &nbsp;
       <br>
-      <p text-align="Center">
+      <p align="Center">
         Home Page Preview
       </p>
       <img src="static/images/Home Page.png" alt="Home Preview">
@@ -60,7 +60,7 @@ python manage.py runserver
     <td width=50%>
       &nbsp;
       <br>
-      <p text-align="Center">
+      <p align="Center">
         Room Conversation Page Preview
       </p>
       <img src="static/images/Conversation Page.png" alt="Conversation Preview">
