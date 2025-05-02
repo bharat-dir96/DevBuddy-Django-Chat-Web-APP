@@ -1,8 +1,8 @@
+<div align="center">
 
-<h2 text-align="Center>###DevBuddy</h2>
+# StudyBuddy
+</div>
 
-
-#
 ### Cloning the Repository
 
 --> 1. Clone the repository using the command below:
