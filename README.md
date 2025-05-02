@@ -1,4 +1,7 @@
-#DevBuddy
+<div text-align="Center>
+# DevBuddy  
+</div>
+
 
 #
 ### Cloning the Repository
