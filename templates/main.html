@@ -10,16 +10,30 @@
     <title>StudyBuddy - Find study partners around the world!</title>
   </head>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const messages = document.querySelectorAll('.custom-message');
+      messages.forEach((msg) => {
+        setTimeout(() => {
+          msg.style.opacity = '0';
+          setTimeout(() => msg.remove(), 500);
+        }, 3000);
+      });
+    });
+  </script>
+  
   <body>
     {% include 'navbar.html' %}
 
     {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-            <li>{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %} 
+        <div class="custom-messages-container">
+            {% for message in messages %}
+                <div class="custom-message {{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
 
     {% block content %}
 

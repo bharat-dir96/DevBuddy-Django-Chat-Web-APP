@@ -34,6 +34,7 @@ def loginPage(request):
 
         if user != None:
             login(request, user)                                               #This will create a user session on the browser.
+            messages.success(request, f'Success!! Welcome {user.username}')
             return redirect('home')
         else:
             messages.error(request, "Username or Password does not exist.")
@@ -43,6 +44,7 @@ def loginPage(request):
 
 def logoutUser(request):
     logout(request)
+    messages.info(request, "You are logged out.")
     return redirect('home')
 
 def registerPage(request):
@@ -56,6 +58,7 @@ def registerPage(request):
             user.username = user.username.lower()
             user.save()
             login(request, user)
+            messages.success(request, f'Registration Successful!! Welcome {user.username}')
             return redirect('home')
         else:
             messages.error(request, "An error occurred during registration.")
@@ -96,6 +99,7 @@ def room(request, pk):
             body = request.POST.get('body')
         )
         room.participants.add(request.user)
+        messages.success(request, 'Message Posted')
         return redirect('room', pk=room.id)
 
 
@@ -129,7 +133,7 @@ def createRoom(request):
             name = request.POST.get('name'),
             description = request.POST.get('description'),
         )
-
+        messages.success(request, 'Success!! Room is created successfully.')
         return redirect('home')
 
     context = {'form':form, 'topics':topics}
@@ -155,7 +159,7 @@ def updateRoom(request, pk):
         room.topic = topic
         room.description = request.POST.get('description')
         room.save()
-        
+        messages.success(request, 'Success!! Room info is updated.')
         return redirect('home')    
 
     context = {'form': form, 'topics':topics, 'room':room}
@@ -170,6 +174,7 @@ def deleteRoom(request, pk):
     
     if request.method == 'POST':
         room.delete()
+        messages.info(request, 'Your Room is deleted.')
         return redirect('home')
     
     return render(request, 'base/delete.html', {'obj':room})
@@ -184,6 +189,7 @@ def deleteMessage(request, pk):
     
     if request.method == 'POST':
         message.delete()
+        messages.info(request, 'Your Message is deleted.')
         return redirect('home')
     
     return render(request, 'base/delete.html', {'obj':message})
@@ -197,6 +203,7 @@ def updateUser(request):
         form = UserForm(request.POST, request.FILES, instance=user)
         if form.is_valid():
             form.save()
+            messages.success(request, f"{user.username}'s info is updated.")
             return redirect('user-profile', pk=user.id)
 
 

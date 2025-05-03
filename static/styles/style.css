@@ -1163,3 +1163,38 @@ a {
   color: var(--color-main);
   font-weight: 1.4rem;
 }
+
+.custom-messages-container {
+    position: fixed;
+    top: 40px;
+    right: 10px;
+    /* display: flex;
+    justify-content: center; */
+    margin: 10px;
+    z-index: 1000;
+  }
+
+  .custom-message {
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    opacity: 0.70;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  /* Style per message tag */
+.custom-message.success {
+    background-color: rgba(40, 167, 69, 0.95);
+  }
+  .custom-message.error {
+    background-color: rgba(220, 53, 69, 0.95);
+  }
+  .custom-message.warning {
+    background-color: rgba(255, 193, 7, 0.95);
+    color: #000;
+  }
+  .custom-message.info {
+    background-color: rgba(23, 162, 184, 0.95);
+  }
