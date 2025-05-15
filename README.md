@@ -1,83 +1,71 @@
+<div align="center">
+<img width="30%" src="static/images/DevBuddy Logo.png">
+
+# DevBuddy
+</div>
+
 ### Cloning the Repository
 
-1. Clone the repository using the command below:
-
+--> Clone the repository using the command below:
 ```bash
-git clone https://github.com/bharat-dir96/Tour-Packages-API.git
+git clone https://github.com/bharat-dir96/DevBuddy-Django-Chat-Web-APP.git
 ```
 
-2. Move into the project directory:
-
+--> Move into the directory where we have the project files:
 ```bash
-cd Tour-Packages-API
+cd DevBuddy-Django-Chat-Web-APP
 ```
 
-3. Create a virtual environment:
-
+--> Create a virtual environment:
 ```bash
-python -m venv envname
+# Let's install virtualenv first
+pip install virtualenv
+
+#Then we create our virtual environment
+virtualenv envname
 ```
 
-4. Activate the virtual environment:
-
+--> Activate the virtual environemnt:
 ```bash
-envname\Scripts\activate  # On Windows
+envname\scripts\activate
 ```
 
-5. Install the required dependencies:
-
+--> Install the requirements:
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
+#
 ### Running the App
 
-#### 🚀 To Run the Backend
-
-1. Move to the backend folder:
-
-```bash
-cd backend
-```
-
-2. Run the Django development server:
-
+--> To run the App, we use:
 ```bash
 python manage.py runserver
 ```
 
-> ⚠ The backend server will start at: `http://127.0.0.1:8000/`
+> ⚠ Then, the development server will be started at http://127.0.0.1:8000/
 
-**Available API Endpoints:**
+#
+### App Preview:
 
-* `GET /api`
-* `GET /api/packages`
-* `GET /api/packages/:code`
+<table width=100%>
+  <tr>
+    <td width=50%>
+      &nbsp;
+      <br>
+      <p align="Center">
+        Home Page Preview
+      </p>
+      <img src="static/images/Home Page.png" alt="Home Preview">
+    </td>
+    <td width=50%>
+      &nbsp;
+      <br>
+      <p align="Center">
+        Room Conversation Page Preview
+      </p>
+      <img src="static/images/Conversation Page.png" alt="Conversation Preview">
+    </td>
+  </tr>
+</table>
 
----
-
-#### 💻 To Run the Frontend
-
-1. Move to the frontend folder:
-
-```bash
-cd irctc-clone
-```
-
-2. Install the frontend dependencies:
-
-```bash
-npm install
-```
-
-3. Start the Vite development server:
-
-```bash
-npm run dev
-```
-
-> ⚠ The frontend server will start at: `http://localhost:5173/`
-
----
